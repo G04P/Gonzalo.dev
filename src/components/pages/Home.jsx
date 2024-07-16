@@ -15,7 +15,7 @@ export const Home = () => {
              <p className='text-xl ml-16 text-gray-400'>Frontend Developer</p>
              <p className='text-xl ml-16 text-gray-400'>Backend Developer</p>
              {/* <button className='border rounded-full hover:bg-blue-600 w-full h-8 flex justify-center'><MdFileDownload className='m-1.5 mt-2'/><strong className='mt-0.5'>Download Resume</strong></button> */}
-             <a href="../../../public/img/gonzalo-perez-juli-bellese-ILaxwMPw.pdf" download className='border rounded-full hover:bg-blue-600 w-full h-8 flex justify-center'>
+             <a href="../../../public/img/Gonzalo Perez - CV-1 (1).pdf" download className='border rounded-full hover:bg-blue-600 w-full h-8 flex justify-center'>
                <MdFileDownload className='m-1.5 mt-2'/><strong className='mt-0.5'>Download Resume</strong>
              </a>
              <a href="mailto:gonzaloalejoperez@gmail.com" className='border rounded-full hover:bg-white hover:text-black w-full h-8 flex justify-center'>
