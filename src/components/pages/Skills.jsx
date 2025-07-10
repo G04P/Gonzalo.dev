@@ -1,216 +1,56 @@
-import styles from '../styles/Skills.module.css';
-import { IoLogoReact } from "react-icons/io5";
-import { BiLogoTypescript } from "react-icons/bi";
-import { RiNextjsFill } from "react-icons/ri";
-import { RiTailwindCssFill } from "react-icons/ri";
-import { FaBootstrap } from "react-icons/fa6";
-import { SiSass } from "react-icons/si";
-import { IoLogoJavascript } from "react-icons/io5";
-import { IoLogoCss3 } from "react-icons/io5";
-import { IoLogoHtml5 } from "react-icons/io5";
-import { FaNodeJs } from "react-icons/fa";
-import { SiExpress } from "react-icons/si";
-import { BiCodeCurly } from "react-icons/bi";
-import { TbBrandCSharp } from "react-icons/tb";
-import { DiMsqlServer } from "react-icons/di";
-import { SiMongodb } from "react-icons/si";
-import { SiPostgresql } from "react-icons/si";
-import { FaUserTie } from "react-icons/fa";
-import { FaUserFriends } from "react-icons/fa";
-import { FaUserCog } from "react-icons/fa";
-import { FaUserShield } from "react-icons/fa";
-import { FaUserClock } from "react-icons/fa";
-import { FaUserEdit } from "react-icons/fa";
-import { FaUserPlus } from "react-icons/fa";
-import { FaUserGraduate } from "react-icons/fa";
-import { FaUserNinja } from "react-icons/fa";
-import { FaUserSecret } from "react-icons/fa";
-import { RiEnglishInput } from "react-icons/ri";
-import { SiMacos } from "react-icons/si";
-import { FaWindows } from "react-icons/fa6";
-import { FaJira } from "react-icons/fa6";
-import { FaSlack } from "react-icons/fa6";
-import { FaDocker } from "react-icons/fa6";
-import { FaBitbucket } from "react-icons/fa";
-import { FaGithub } from "react-icons/fa";
-import { IoGitMerge } from "react-icons/io5";
-import CardSkills from '../card/CardSkills';
+import { motion } from 'framer-motion';
+import { backSkills, frontSkills, otherSkills, softSkills } from '../utils/Skills-icons';
+import { BiCodeAlt } from 'react-icons/bi'; // Ícono </>
+
+const sectionVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+};
+
+const SkillsSection = ({ title, skills }) => (
+  <motion.section
+    variants={sectionVariants}
+    initial="hidden"
+    whileInView="visible"
+    viewport={{ once: true }}
+    className="w-full max-w-5xl mx-auto px-4 mb-10"
+  >
+    <h3 className="text-2xl font-bold text-gray-300 mb-4 border-b border-gray-700 pb-2">
+      {title}
+    </h3>
+    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+      {skills.map((item, index) => (
+        <motion.div
+          key={index}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          className="flex items-center gap-2 px-4 py-2 rounded-xl border border-gray-600 bg-white/5 backdrop-blur-sm shadow transition-all duration-300 text-white"
+        >
+          <span className="text-xl">{item.icon}</span>
+          <span className="text-sm font-medium">{item.name}</span>
+        </motion.div>
+      ))}
+    </div>
+  </motion.section>
+);
 
 export const Skills = () => {
-  const frontSkills = [
-    {
-      icon: <IoLogoReact />,
-      name: 'React',
-    },
-    {
-      icon: <BiLogoTypescript />,
-      name: 'Typescript',
-    },
-    {
-      icon: <RiNextjsFill />,
-      name: 'Next.js',
-    },
-    {
-      icon: <RiTailwindCssFill />,
-      name: 'Tailwind CSS',
-    },
-    {
-      icon: <FaBootstrap />,
-      name: 'Bootstrap',
-    },
-    {
-      icon: <SiSass />,
-      name: 'SASS',
-    },
-    {
-      icon: <IoLogoJavascript />,
-      name: 'JavaScript',
-    },
-    {
-      icon: <IoLogoCss3 />,
-      name: 'CSS',
-    },
-    {
-      icon: <IoLogoHtml5 />,
-      name: 'HTML',
-    },
-  ];
-  const backSkills = [
-    {
-      icon: <FaNodeJs />,
-      name: 'Node.js',
-    },
-    {
-      icon: <SiExpress />,
-      name: 'Express.js',
-    },
-    {
-      icon: <BiCodeCurly />,
-      name: 'REST API',
-    },
-    {
-      icon: <DiMsqlServer />,
-      name: 'MySQL',
-    },
-    {
-      icon: <TbBrandCSharp />,
-      name: '.NET',
-    },
-    {
-      icon: <SiMongodb />,
-      name: 'MongoDB',
-    },
-    {
-      icon: <SiPostgresql />,
-      name: 'PostgreSQL',
-    },
-  ];
-  const softSkills = [
-    {
-      icon: <FaUserTie />,
-      name: 'Problem-solving',
-    },
-    {
-      icon: <FaUserFriends />,
-      name: 'Teamwork',
-    },
-    {
-      icon: <FaUserCog />,
-      name: 'Adaptability',
-    },
-    {
-      icon: <FaUserShield />,
-      name: 'Resilience',
-    },
-    {
-      icon: <FaUserClock />,
-      name: 'Patience',
-    },
-    {
-      icon: <FaUserEdit />,
-      name: 'Creativity',
-    },
-    {
-      icon: <FaUserPlus />,
-      name: 'Self-learning',
-    },
-    {
-      icon: <FaUserGraduate />,
-      name: 'Communication',
-    },
-    {
-      icon: <FaUserNinja />,
-      name: 'Leadership',
-    },
-    {
-      icon: <FaUserSecret />,
-      name: 'Critical Thinking',
-    }
-  ];
-  const otherSkills = [
-    {
-      icon: <RiEnglishInput />,
-      name: 'English',
-    },
-    {
-      icon: <SiMacos />,
-      name: 'MacOS',
-    },
-    {
-      icon: <FaWindows />,
-      name: 'Windows',
-    },
-    {
-      icon: <FaJira />,
-      name: 'Jira',
-    },
-    {
-      icon: <FaSlack />,
-      name: 'Slack',
-    },
-    {
-      icon: <FaDocker />,
-      name: 'Docker',
-    },
-    {
-      icon: <FaBitbucket />,
-      name: 'Bitbucket',
-    },
-    {
-      icon: <FaGithub />,
-      name: 'GitHub',
-    },
-    {
-      icon: <IoGitMerge />,
-      name: 'Git',
-    },
-  ];
   return (
-    <article className=' m-6 p-4 text-white flex flex-col justify-center gap-10'>
-      <h3 className="md:pl-56 text-xl text-bold  pt-4 text-left opacity-50"><strong>Frontend</strong></h3>
-      <div className="flex flex-wrap justify-center max-w-3xl mx-auto">
-        {frontSkills.map((item, index) => (
-          <CardSkills key={index} icon={item.icon} name={item.name} />
-        ))}
+    <motion.article
+      className="m-6 p-4 text-white flex flex-col items-center gap-12"
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+    >
+      <div className="flex items-center gap-3 mb-6">
+        <BiCodeAlt className="text-4xl text-indigo-400" />
+        <h2 className="text-4xl font-bold tracking-wide">Skills & Dev Stack</h2>
       </div>
-      <h3 className="md:pl-56 text-xl text-bold pt-4 text-left opacity-50"><strong>Backend</strong></h3>
-      <div className="flex flex-wrap justify-center max-w-3xl mx-auto">
-        {backSkills.map((item, index) => (
-          <CardSkills key={index} icon={item.icon} name={item.name} />
-        ))}
-      </div>
-      <h3 className="md:pl-56 text-xl text-bold pt-4 text-left opacity-50"><strong>Soft Skills</strong></h3>
-      <div className="flex flex-wrap justify-center max-w-3xl mx-auto">
-        {softSkills.map((item, index) => (
-          <CardSkills key={index} icon={item.icon} name={item.name} />
-        ))}
-      </div>
-      <h3 className="md:pl-56 text-xl text-bold pt-4 text-left opacity-50"><strong>Other Skills</strong></h3>
-      <div className="flex flex-wrap justify-center max-w-3xl mx-auto">
-        {otherSkills.map((item, index) => (
-          <CardSkills key={index} icon={item.icon} name={item.name} />
-        ))}
-      </div>
-    </article>
+
+      <SkillsSection title="Frontend" skills={frontSkills} />
+      <SkillsSection title="Backend" skills={backSkills} />
+      <SkillsSection title="Soft Skills" skills={softSkills} />
+      <SkillsSection title="Otras Herramientas" skills={otherSkills} />
+    </motion.article>
   );
 };
