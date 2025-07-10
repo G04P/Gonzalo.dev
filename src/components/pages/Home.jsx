@@ -63,7 +63,7 @@ export const Home = () => {
 
           <div className='flex flex-col sm:flex-row gap-4 mt-4 w-full justify-center'>
             <motion.a 
-              href="/public/img/Gonzalo Alejo Perez - CV.pdf" 
+              href="/Gonzalo-Alejo-Perez-CV.pdf"
               download 
               className='bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-6 py-2 rounded-full shadow hover:scale-105 transition-all text-center'
               whileTap={{ scale: 0.95 }}
