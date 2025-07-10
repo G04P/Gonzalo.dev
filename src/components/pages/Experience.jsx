@@ -4,14 +4,20 @@ const experiences = [
   {
     company: 'GlobalTask',
     role: 'Full Stack Developer',
-    period: '2023 - Presente',
+    period: '2024 - Presente',
     description: 'Desarrollo de soluciones en .NET, Blazor y React. Enfoque en microservicios y mantenimiento de código productivo.'
   },
   {
-    company: 'Mastellone (freelance)',
-    role: 'Desarrollador backend y frontend',
-    period: '2024',
-    description: 'Soporte y mejoras en aplicaciones internas utilizando .NET y React.'
+    company: 'Mastellone Proveedores MH',
+    role: 'Full Stack Developer',
+    period: '2024 - Presente',
+    description: 'Soporte y mejoras en aplicaciones internas utilizando .NET y ReactJS.'
+  },
+  {
+    company: 'Periodo de Prueba',
+    role: 'Full Stack Developer',
+    period: '2024 (Abril) - 2024 (Julio)',
+    description: 'Features y mejoras en web  utilizando Nest JS y ReactJS.'
   }
 ];
 
