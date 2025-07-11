@@ -27,7 +27,6 @@ export const Home = () => {
       transition={{ duration: 0.7 }}
     >
 
-      {/* Perfil */}
       <motion.section 
         className='flex justify-center border rounded-2xl shadow-xl w-full max-w-4xl p-8 bg-white/5 backdrop-blur-md'
         initial={{ scale: 0.95, opacity: 0 }}
@@ -99,7 +98,6 @@ export const Home = () => {
         </div>
       </motion.section>
 
-      {/* Línea divisoria animada */}
       <motion.hr 
         className="border-t border-gray-500 w-2/3 opacity-50"
         initial={{ scaleX: 0 }}
@@ -107,7 +105,6 @@ export const Home = () => {
         transition={{ duration: 1, delay: 0.2 }}
       />
 
-      {/* Sobre mí */}
       <motion.section 
         className='max-w-4xl text-white text-lg leading-relaxed tracking-wide p-4 space-y-6'
         initial="hidden"

@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { backSkills, frontSkills, otherSkills, softSkills } from '../utils/Skills-icons';
-import { BiCodeAlt } from 'react-icons/bi'; // Ícono </>
+import { BiCodeAlt } from 'react-icons/bi'; 
 
 const sectionVariants = {
   hidden: { opacity: 0, y: 30 },
@@ -18,7 +18,7 @@ const SkillsSection = ({ title, skills }) => (
     <h3 className="text-2xl font-bold text-gray-300 mb-4 border-b border-gray-700 pb-2">
       {title}
     </h3>
-    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+<div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
       {skills.map((item, index) => (
         <motion.div
           key={index}
