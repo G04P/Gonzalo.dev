@@ -14,7 +14,7 @@ import {
   FaUserSecret, FaWindows, FaJira, FaSlack, FaDocker, FaBitbucket,
   FaGithub, FaNodeJs
 } from 'react-icons/fa';
-import { SiSass, SiExpress, SiMongodb, SiPostgresql, SiMacos } from 'react-icons/si';
+import { SiSass, SiExpress, SiMongodb, SiPostgresql, SiMacos, SiBlazor } from 'react-icons/si';
 import { DiMsqlServer } from 'react-icons/di';
 import { TbBrandCSharp } from 'react-icons/tb';
 
@@ -28,6 +28,7 @@ export const frontSkills = [
   { icon: <IoLogoJavascript />, name: 'JavaScript' },
   { icon: <IoLogoCss3 />, name: 'CSS' },
   { icon: <IoLogoHtml5 />, name: 'HTML' },
+  { icon: <SiBlazor/>, name: 'Blazor'}
 ];
 
 export const backSkills = [
